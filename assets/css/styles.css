@@ -38,6 +38,34 @@ p{
     color: #555;
 }
 
+.user-icon {
+    position: relative;
+}
+
+.user-icon .user-btn {
+    margin-right: 15px;
+}
+
+.user-info {
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none;
+}
+
+.user-info h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+.user-info a {
+    float: right;
+    margin: 10px;
+}
+
 .container {
     max-width: 1300px;
     margin: auto;
@@ -309,6 +337,25 @@ ul {
     display: none;
 }
 
+/* -------------- Login modal ------------------ */
+
+#form-login-container {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#form-login-container.open {
+    display: flex;
+}
+
 /* ---------- All products page ------------ */
 
 .row-2 {
@@ -482,6 +529,18 @@ th:last-child {
     overflow: hidden;
 }
 
+.form-container .form-close {
+    position: absolute;
+    padding: 12px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.form-container .form-close:hover {
+    opacity: 0.6;
+}
+
 .form-container span {
     font-weight: bold;
     padding: 0 10px;
@@ -522,27 +581,11 @@ form .btn:focus {
     outline: none;
 }
 
-#LoginForm {
-    left: -300px;
-}
-
-#RegForm {
-    left: 0;
-}
-
 form a {
     font-size: 12px;
 }
 
-#Indicator {
-    width: 100px;
-    border: none;
-    background: #ff523b;
-    height: 3px;
-    margin-top: 8px;
-    transform: translateX(100px);
-    transition: transform 1s;
-}
+
 
 
 /* ----------- media query for menu -------------- */

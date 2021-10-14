@@ -21,16 +21,41 @@
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="account.html">Account</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="user-icon js-user">
+                    <a href="#" class="user-btn"><img src="./assets/images/user.png" width="30px" height="30px"></a>
+                    <div class="user-info">
+                        <h3>Hello Tuan!</h3>
+                        <a href="#">Sign out.</a>
+                    </div>
+                </div>
                 <a href="cart.html"><img src="./assets/images/cart.png" width="30px" height="30px"></a>
                 <img src="./assets/images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
         </div>
+
+    <!---------- Login modal ------------>
+
+    <div id="form-login-container" class = "js-login-form">
+        <div class="login-form">
+            <div class="form-container">
+                <a href="#"><i class="fa fa-times form-close js-close"></i></a>
+                <h2>Login</h2>
+                <form id="LoginForm">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Login</button>
+                    <a href="">Forgot Password?</a>
+                    <br>
+                    <a href="register.html">Haven't have a account? Join us!</a>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <div class="small-container">
 
@@ -263,6 +288,26 @@
                     MenuItems.style.maxHeight = "0px"
                 }
         }
+    </script>
+
+    <!------------ js for login form -------------->
+    
+    <script>
+        const form = document.querySelector('.js-login-form')
+        const user = document.querySelector('.js-user')
+        const closeForm = document.querySelector('.js-close')
+
+        function showFormLogin() {
+            form.classList.add('open')
+        }
+
+        function hideFormLogin() {
+            form.classList.remove('open')
+        }
+
+        user.addEventListener('click', showFormLogin)
+        closeForm.addEventListener('click', hideFormLogin)
+
     </script>
 
 </body>
