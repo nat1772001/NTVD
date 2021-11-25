@@ -19,6 +19,33 @@
                 <div class="logo">
                     <a href="index.html"><img src="./assets/images/logo.png" width="125px"></a>
                 </div>
+                
+                <!-- @using (Html.BeginForm("LayTuKhoaTimKiem", "TimKiem")) { -->
+                    <div class="search-box">
+                        <div class="input-box">
+                            <input type="text" name="TuKhoa" placeholder="Search something.....">
+                        </div>
+        
+                        <button class="search-button" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+        
+                        <script>
+                            $('.search-box .input-box input').focus(
+                                () => {
+                                    $('.search-box .input-box').addClass('active');
+                                }
+                            );
+                            $('.search-box .input-box input').blur(
+                                () => {
+                                    $('.search-box .input-box').removeClass('active');
+                                }
+                            );
+                        </script>
+                    </div>
+                <!-- } -->
+    
+    
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</a></li>
@@ -29,14 +56,11 @@
                 </nav>
                 <div class="user-icon js-user">
                     <a href="#" class="user-btn"><img src="./assets/images/user.png" width="30px" height="30px"></a>
-                    <div class="user-info">
-                        <h3>Hello Tuan!</h3>
-                        <a href="#">Sign out.</a>
-                    </div>
                 </div>
                 <a href="cart.html"><img src="./assets/images/cart.png" width="30px" height="30px"></a>
                 <img src="./assets/images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
+            
             <div class="row">
                 <div class="col-2">
                     <h1>Give Your Workout <br> A New Style!</h1>

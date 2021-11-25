@@ -38,6 +38,65 @@ p{
     color: #555;
 }
 
+.search-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 7%;
+}
+
+.search-box .input-box {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 30px;
+    width: 0px;
+    transition: 0.5s;
+}
+
+.search-box .input-box.active {
+    width: 300px;
+}
+
+.search-box .input-box input {
+    width: 100%;
+    background: transparent;
+    padding-right: 50px;
+    border: none;
+    outline: none;
+    color: #555;
+    font-size: 17px;
+}
+
+.search-box .search-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 6px #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+
+.search-box .search-button i {
+    font-size: 22px;
+}
+ 
+.search-button button {
+    border: none;
+}
+
+.search-box:hover > .input-box {
+    width: 300px;
+}
+
+
 .user-icon {
     position: relative;
 }
@@ -54,6 +113,10 @@ p{
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     display: none;
+}
+
+.user-info.open {
+    display: flex;
 }
 
 .user-info h3 {
@@ -111,7 +174,7 @@ p{
 }
 
 .header {
-    background: radial-gradient(#fff,#ffd6d6);
+    /* background: radial-gradient(#fff,#ffd6d6); */
 }
 
 .header .row {
@@ -157,6 +220,7 @@ p{
     position: relative;
     line-height: 60px;
     color: #555;
+    z-index: -1;
 }
 
 .title::after {
@@ -253,6 +317,7 @@ small {
 
 .col-5 {
     width: 160px;
+    z-index: -1;
 }
 
 .col-5 img {
@@ -510,6 +575,17 @@ th:last-child {
     text-align: right;
 }
 
+.cart-page .checkout-btn {
+    position: absolute;
+    border-radius: 0%;
+    border: 1px #555;
+    width: 150px;
+    height: 30px;
+    right: 25px;
+    bottom: 0;
+    cursor: pointer;
+}
+
 /* ----------- account page -------------- */
 
 .account-page {
@@ -590,7 +666,7 @@ form a {
 
 /* ----------- media query for menu -------------- */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     
     nav ul {
         position: absolute;
@@ -616,6 +692,13 @@ form a {
     .menu-icon {
         display: block;
         cursor: pointer;
+    }
+}
+
+/* ----------- media query for search box -------------- */
+@media only screen and (max-width: 700px)  {
+    .search-box {
+        display: none;
     }
 }
 
